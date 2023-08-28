@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "management-sys-1a804": {
+      "hosting": {
+        "fire": [
+          "management-sys-1a804"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "management-sys-1a804"
+  }
+}

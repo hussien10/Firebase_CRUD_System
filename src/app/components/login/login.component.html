@@ -1,0 +1,28 @@
+<div class="container">
+ <div class="form-container">
+  <h1>Login</h1>
+  <form (submit)="login()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="email">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div class="row jusiify-contnent-between">
+    <div class="col-md-6">
+      <a routerLink="/register">you don,t have account? create one</a>
+    </div>
+    <div class="col-md-6">
+      <a routerLink="/forgotpassword">Forgot passowrd</a>
+    </div>
+
+      <a class="btn btn-danger " (click)="signWithGoogle()">Sign in with google</a>
+  </div>
+ </div>
+</div>

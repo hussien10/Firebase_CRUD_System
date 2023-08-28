@@ -1,0 +1,56 @@
+<div class="container-fluid p-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-container ">
+        <form>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="FirstName" placeholder="First Name" name="firstName" [(ngModel)]="firstName">
+            <label for="FirstName">First Name</label>
+          </div>
+          <div class="form-floating  mb-3">
+            <input type="text" class="form-control" id="LastName" placeholder="Last Name" name="lastName" [(ngModel)]="lastName">
+            <label for="LastName">Last Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" [(ngModel)]="email">
+            <label for="email">Email address</label>
+          </div>
+          <div class="form-floating  mb-3">
+            <input type="tel" class="form-control" id="Phone" placeholder="Phone" name="phone" [(ngModel)]="phone">
+            <label for="Phone">Phone</label>
+          </div>
+          <button (click)="addStudent()" type="button" class="btn btn-primary">
+            Add Student
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students">
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.phone}}</td>
+            <td><button class="btn btn-danger" (click)="deleteStudent(student)">Delete</button>
+              <!-- <button class="btn btn-success" (click)="updateStudent(student)">edit</button> -->
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <button class="btn btn-danger mt-5" (click)="logout()">logout</button>
+
+</div>
