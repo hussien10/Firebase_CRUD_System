@@ -27,8 +27,11 @@ export class DataService {
   }
   // update student
 
-  updateStudent(student:Student){
-    this.deleteStudent(student)
-    this.addStudent(student)
+  // updateStudent(student:Student){
+  //   this.deleteStudent(student)
+  //   this.addStudent(student)
+  // }
+  getStudent(id:string|null){
+    return this._AngularFirestore.doc(`/students/${id}`).get()
   }
 }

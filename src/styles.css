@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.form-container{
+.form-container:not(.small-form){
   width: 50%;
   border-radius: 5px;
   -webkit-border-radius: 5px;

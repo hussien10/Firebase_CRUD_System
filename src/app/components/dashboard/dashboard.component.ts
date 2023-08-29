@@ -1,3 +1,4 @@
+import { Route, Router } from '@angular/router';
 import { DataService } from './../../shared/data.service';
 import { Student } from './../../model/student';
 import { AuthService } from './../../shared/auth.service';
@@ -22,7 +23,7 @@ firstName!:string;
 lastName!:string;
 email!:string;
 phone!:string;
-  constructor(private _AuthService:AuthService, private _DataService:DataService) { }
+  constructor(private _AuthService:AuthService, private _DataService:DataService, private _router:Router) { }
 
   ngOnInit(): void {
     this.getAllStudents()
@@ -71,5 +72,9 @@ this.resetForm()
     if(window.confirm(`you sure you want to delete ${student.firstName + "" +student.lastName + "?"}`)){
       this._DataService.deleteStudent(student)
     }
+  }
+
+  singleStudent(id:string){
+    this._router.navigate(["student",id])
   }
 }

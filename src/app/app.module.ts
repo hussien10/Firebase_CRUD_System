@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VarifyEmailComponent } from './components/varify-email/varify-email.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { StudentComponent } from './components/student/student.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     DashboardComponent,
     ForgotPasswordComponent,
     VarifyEmailComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
